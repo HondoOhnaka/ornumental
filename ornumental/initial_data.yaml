@@ -1,0 +1,3 @@
+- fields: {domain: 'ornumental.com', name: 'ornumental.com'}
+  model: sites.site
+  pk: 1

@@ -1,4 +1,9 @@
-*.log
-*.pot
-*.pyc
+*.pyc 
+.DS_Store
 local_settings.py
+local_static/
+local_static/*
+static/admin
+local_media/
+local_media/*
+ornum.sqlite

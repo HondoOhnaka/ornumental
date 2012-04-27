@@ -7,7 +7,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('ornum', 'jim@ornumental.com'),
+    ('ornum', 'jim@ornumental.com'),
 )
 
 MANAGERS = ADMINS
@@ -122,7 +122,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ornum_blog',
-    'contact_form',
     'south',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',

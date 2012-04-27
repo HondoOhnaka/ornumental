@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title|truncatechars:60 }}{% endblock title %}
+
+{% block content %}
+<article>
+	<h2>{{ post.title }}</h2>
+	<date>{{ post.published_date }}</date><span class="category">Category: Some Category</span>
+	<section>
+		{{ post.body }}
+	</section>
+</article>
+{% endblock content %}

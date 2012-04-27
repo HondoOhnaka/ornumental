@@ -4,12 +4,24 @@ from django.template import RequestContext
 from django.views.generic.simple import direct_to_template
 from django.contrib import messages
 
-def blog_main_page(request, template='blog_base.html'):
-    messages.success(request, 'this is a success')
-    messages.warning(request, 'this is a warning')
-    messages.error(request, 'this is a error')
+from ornum_blog.models import BlogPost
+
+def post_list_page(request, template='post_list.html'):
+    
+    posts = BlogPost.objects.all().order_by('published_date')
+    
     vars = RequestContext(request, {
-        'foo': 'foobarbaz',
-        'messages': messages,
+        'posts': posts,
     })
+    return render_to_response(template, vars)
+    
+def post_page(request, 
+    post_slug=None,
+    template='post.html'):
+
+    post = get_object_or_404(BlogPost, slug=post_slug)
+    
+    vars = RequestContext(request, {
+        'post': post,
+        })
     return render_to_response(template, vars)

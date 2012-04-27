@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock title %}
+
+{% block content %}
+
+  {% if posts %}
+    {% for post in posts %}
+  <article>
+    <h2><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
+    <date>{{ post.published_date }}</date><span class="category">Category: Some Category</span>
+    <section>
+			{{ post.body|truncatewords:100 }}
+		</section>
+		<a href="#">Read More</a>
+  </article>
+    {% endfor %}
+  {% endif %}
+{% endblock content %}

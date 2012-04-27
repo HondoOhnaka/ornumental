@@ -118,11 +118,12 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
    h1 {1.6em}
     h2 { font-size: 1.4em;}
     h3 { font-size: 1.2em; }
+    ul li { list-style-type: none; }
    
    nav a { padding: 0; }
-   a { text-decoration: none; color: #555}
-   a:hover { text-decoration: underline; color:black; }
-   a:visited { color:black; }
+   a { text-decoration: underline; color: #207ce5}
+   a:hover { color:black; }
+   a:visited { color: #207ce5; }
 
    #header-container{ 
        border-bottom: 2px solid #555; 
@@ -134,28 +135,35 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
    
    #main aside { border-top: 2px solid #555; }
 
-   #header-container,
-   #footer-container,
-   #main aside {
-       background:#aaa;
+   #header-container {   
+       background: rgb(73,155,234);
+       background: -moz-linear-gradient(top,  rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(73,155,234,1)), color-stop(100%,rgba(32,124,229,1)));
+       background: -webkit-linear-gradient(top,  rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+       background: -o-linear-gradient(top,  rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+       background: -ms-linear-gradient(top,  rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+       background: linear-gradient(top,  rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 );
+
        color: #555;
    }
-   #header-container a,
-   #footer-container a,
-   #main aside a {
-       color:black;
-   }
+   #footer-container footer {
+       color: #333;
+    }
    
    #title { 
        padding: 0;
        margin: 5px 0 8px;
        font-family: 'Advent Pro', sans-serif;
-       text-shadow: 1px 1px 1px #555;
+       text-shadow: 2px 2px 0px #555;
    }
-   
-   #title a { color: #eee; }
+   #title a { 
+       color: #eee; text-decoration: none;
+   }   
+
   
   footer ul li { 
+      
       text-align: center; 
       line-height:1.4em;
   }
@@ -163,41 +171,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
    ::-moz-selection { background: #aaa; color: #fff; text-shadow: none; }
    ::selection      { background: #aaa; color: #fff; text-shadow: none; }
    
-
-   /* forms */
-   
-   /* global button link */
-   input[type=submit] {
-     display: inline-block;
-     height: 22px;
-     border: 1px solid #CCC;
-     filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=white,EndColorStr=#DDD);
-     background: #EEE;
-     background: -webkit-gradient(linear,0 0,0 100%,from(white),to(#DDD));
-     background: -webkit-linear-gradient(white,#DDD);
-     background: -moz-linear-gradient(top,white,#DDD);
-     background: -o-linear-gradient(white,#DDD)!important;
-     padding: 5px 15px 20px;
-     text-shadow: 0 1px 0 white;
-     -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-     border-radius: 5px;
-     font-size: 1em;
-     color: #2b4f7d;
-   }
-   
-   .button-container.right {
-       text-align: right;
-   }
-   ul.errorlist { 
-       padding: 0;
-       margin: 0;
-   }
-   ul.errorlist li { 
-       color: red;
-       background: pink;
-   }  
-   li { list-style-type: none; }
 
 /* =============================================================================
    Media Queries
